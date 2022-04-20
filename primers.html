@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Amy J Baldwin">
+  <link rel="canonical" href="https://volac-genomics.github.io/Tool4_docs/primers.html">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Designing primers - Tool 4</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Designing primers";
+    var mkdocs_page_input_path = "primers.md";
+    var mkdocs_page_url = "/Tool4_docs/primers.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Tool 4</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="quick.html">Quick start</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Running Tool 4</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="access.html">Accessing the server</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="loading.html">Loading query genomes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="running.html">Initiating Tool 4</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="options.html">Customisation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="unloading.html">Downloading Tool 4 outputs</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="primers.html">Designing primers</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Further Information</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Tool 4</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Running Tool 4 &raquo;</li>
+        
+      
+    
+    <li>Designing primers</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/volac-genomics/Tool4_docs/edit/master/docs/primers.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="designing-diagnostic-primers">Designing diagnostic primers</h2>
+<hr />
+<h2 id="tool-4-output-description">Tool 4 output description</h2>
+<p>Subject to positive identification, the ten longest unique portions of an isolate’s genome are deposited in the output file (<code>*.candidate_unique.fa</code>). </p>
+<p>While these stretch are unique when compared with the reference library and the other subject isolates, it may still be possible that these stretches do appear in other organisms that were not included in the analysis. It is important to bear this in mind when designing diagnostic primers. </p>
+<p>It is also worth considering the context of the unique portion when selecting which portion use for primer design. Will the site of the primers be stable?</p>
+<hr />
+<h2 id="ncbi-primer-blast">NCBI Primer BLAST</h2>
+<p>To design diagnostic primers <a href="https://www.ncbi.nlm.nih.gov/tools/primer-blast/">NCBI’s Primer-BLAST</a> tool is suggested. This will also check primer pair specificity. </p>
+<p>Specify the ‘nr’ database. You can also specify the organism(s) that you wish to check for specificity, for example, ‘bacteria (taxid:2)’, or ‘Lactobacillales (taxid:186826)’ or ‘Lactobacillus (taxid:1578)’.</p>
+<div class="admonition information">
+<p class="admonition-title">Information</p>
+<p>NCBI’s Primer-BLAST tool uses primer3 to design PCR primers and then uses BLAST and global alignment algorithm to screen primers against user-selected database in order to avoid primer pairs (all combinations including forward-reverse primer pair, forward-forward as well as reverse-reverse pairs) that can cause non-specific amplifications. </p>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQs">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="unloading.html" class="btn btn-neutral" title="Downloading Tool 4 outputs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/volac-genomics/Tool4_docs/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="unloading.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="faq.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
